@@ -24,24 +24,29 @@ durante 365 días.
 
 ## Requerimientos
 
-numpy matplotlib imageio pillow
+numpy 
+matplotlib 
+imageio 
+pillow
 
 ## Estructura del Proyecto
 
-Ver estructura definida en carpetas de secuencial, paralelo, data,
-resultados e informe.
+![Texto alternativo](img\image.png)
 
-## Ejecución
-
-python secuencial/sir_sequential.py\
-python paralelo/sir_parallel.py\
-python paralelo/run_scaling.py\
-python paralelo/make_animation.py
 
 ## Comparación
 
-Ambas versiones producen los mismos resultados, pero la paralela reduce
-significativamente el tiempo.
+Sequecial:
+
+Tiempo de simulacion: 27.7s
+
+![Animación Secuencial](secuencial/Animation/sir_seq_demo.gif)
+
+Paralelo:
+
+Tiempo de simulacion: 26.1
+
+![Animación Paralela](Paralelo/Animation_par/sir_par_demo.gif)
 
 ## Conclusión
 
