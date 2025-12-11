@@ -51,6 +51,17 @@ Tiempo de simulacion: 26.1
 
 ![Animación Paralela](Paralelo/Animation_par/sir_seq_demo.gif)
 
+
+## Graficos comparativos 
+
+Speedup vs Cores
+
+![](informe/figuras/speedup_vs_cores.png)
+
+Tiempo vs Cores
+
+![](informe/figuras/tiempo_vs_cores.png)
+
 ## Conclusión
 
 El proyecto valida el uso de Monte Carlo y programación paralela en
