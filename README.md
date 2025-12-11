@@ -40,7 +40,9 @@ Sequecial:
 
 Tiempo de simulacion: 27.7s
 
-🔴 Rojo — INFECTADO (I) 🟢 Verde — RECUPERADO (R) ⚫ Gris oscuro / Negro — MUERTO (D)
+🔴 Rojo — INFECTADO     🟢 Verde — RECUPERADO    ⚫ Gris oscuro / Negro — MUERTO
+
+
 ![Animación Secuencial](secuencial/Animation/sir_seq_demo.gif)
 
 Paralelo:

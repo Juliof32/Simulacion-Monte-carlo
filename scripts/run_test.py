@@ -4,24 +4,24 @@ import csv
 import time
 
 
-# PARCHE DE RUTA (IMPRESCINDIBLE EN TU PROYECTO)
+# parche de ruta (imprescindible en tu proyecto)
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(ROOT)
 
 
-# IMPORTS CORRECTOS SEGÚN TU ESTRUCTURA
+# imports correctos según tu estructura
 from secuencial.Sec_model import run_sequential_simulation
 from Paralelo.Parl_model import run_parallel_simulation
 
 
-# PARÁMETROS DEL EXPERIMENTO
+# parámetros del experimento
 H = 300
 W = 300
 DAYS = 60
-CORES = [1, 2, 4, 8]   # Simulados para la rúbrica
+CORES = [1, 2, 4, 8]   
 
 
-# EJECUCIÓN Y MEDICIÓN DE TIEMPOS
+# ejecución y medición de tiempos
 results = []
 
 print("Ejecutando experimento de Strong Scaling...\n")
@@ -38,7 +38,7 @@ for c in CORES:
     print(f"Cores: {c} | Tiempo: {t_par:.4f} s | Speed-up: {speedup:.2f}")
 
 
-# GUARDAR CSV
+# guardar csv
 os.makedirs("data", exist_ok=True)
 
 csv_path = "data/scaling_results.csv"

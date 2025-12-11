@@ -12,9 +12,9 @@ REC = np.uint8(2)
 DEAD = np.uint8(3)
 
 def init_grid(H: int, W: int, initial_infected_frac: float=1e-4, seed: int=12345) -> np.ndarray:
-    """
-    Inicializa la grilla con la fracción de infectados inicial.
-    """
+
+    # Inicializa la grilla con la fracción de infectados inicial.
+
     rng = np.random.default_rng(seed)
     total = H * W
     grid = np.full((H, W), SUS, dtype=np.uint8)
@@ -24,9 +24,9 @@ def init_grid(H: int, W: int, initial_infected_frac: float=1e-4, seed: int=12345
     return grid
 
 def count_infected_neighbors(grid: np.ndarray) -> np.ndarray:
-    """
-    Cuenta vecinos infectados (Moore, 8 vecinos) usando sumas de desplazamientos.
-    """
+
+    # Cuenta vecinos infectados (Moore, 8 vecinos) usando sumas de desplazamientos.
+
     I = (grid == INF).astype(np.uint8)
     # sum of 8 shifts
     up    = np.roll(I, -1, axis=0)
@@ -41,9 +41,9 @@ def count_infected_neighbors(grid: np.ndarray) -> np.ndarray:
     return neigh
 
 def step_day(grid: np.ndarray, beta: float, gamma: float, mu: float, rng: np.random.Generator) -> Tuple[np.ndarray, dict]:
-    """
-    Ejecuta un día y devuelve la nueva grilla y estadísticas parciales.
-    """
+
+    # Ejecuta un día y devuelve la nueva grilla y estadísticas parciales.
+
     H, W = grid.shape
     neigh = count_infected_neighbors(grid)
 
@@ -108,10 +108,7 @@ def run_sequential(H=1000, W=1000, days=365, beta=0.25, gamma=0.05, mu=0.01,
 
 
 def run_parallel_simulation(H, W, DAYS):
-    """
-    Función adaptadora para run_scaling.py (versión paralela).
-    En Python se mide como versión optimizada / vectorizada.
-    """
+
     _, _, t_total = run_sequential(
         H=H,
         W=W,
