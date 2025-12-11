@@ -31,7 +31,7 @@ pillow
 
 ## Estructura del Proyecto
 
-![Texto alternativo](img\image.png)
+![Texto alternativo](img/image.png)
 
 
 ## Comparación
@@ -40,13 +40,14 @@ Sequecial:
 
 Tiempo de simulacion: 27.7s
 
+🔴 Rojo — INFECTADO (I) 🟢 Verde — RECUPERADO (R) ⚫ Gris oscuro / Negro — MUERTO (D)
 ![Animación Secuencial](secuencial/Animation/sir_seq_demo.gif)
 
 Paralelo:
 
 Tiempo de simulacion: 26.1
 
-![Animación Paralela](Paralelo/Animation_par/sir_par_demo.gif)
+![Animación Paralela](Paralelo/Animation_par/sir_seq_demo.gif)
 
 ## Conclusión
 
